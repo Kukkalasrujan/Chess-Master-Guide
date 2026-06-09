@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Chess Guide - Learn Chess from Basics to Advanced Tactics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">♚ Chess Master Guide</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#basics">Basics</a></li>
+                <li><a href="#moves">Moves</a></li>
+                <li><a href="#tactics">Tactics</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#board">Board Setup</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <h1>Master the Game of Chess</h1>
+            <p>Learn everything from basic moves to advanced tactics</p>
+            <button class="cta-btn" onclick="scrollTo('basics')">Start Learning</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- SECTION 1: BASICS -->
+        <section id="basics" class="section">
+            <h2>Getting Started: Chess Basics</h2>
+            
+            <div class="subsection">
+                <h3>What is Chess?</h3>
+                <p>Chess is a strategic board game played between two players. Each player controls 16 pieces and the goal is to checkmate the opponent's king - meaning the king is under attack and has no escape.</p>
+            </div>
+
+            <div class="subsection">
+                <h3>The Chess Board</h3>
+                <p>The chessboard consists of 64 squares arranged in an 8x8 grid. The squares alternate between light and dark colors. The board is always positioned so that a light square is in the bottom-right corner.</p>
+                <div class="board-image">
+                    <p>📋 Standard 8x8 Chess Board with coordinates a-h (columns) and 1-8 (rows)</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>The Pieces</h3>
+                <div class="pieces-grid">
+                    <div class="piece-card">
+                        <div class="piece-symbol">♔</div>
+                        <h4>King (♔)</h4>
+                        <p><strong>Value:</strong> Infinite (most important)</p>
+                        <p><strong>Movement:</strong> One square in any direction</p>
+                        <p><strong>Quantity:</strong> 1 per player</p>
+                    </div>
+                    <div class="piece-card">
+                        <div class="piece-symbol">♕</div>
+                        <h4>Queen (♕)</h4>
+                        <p><strong>Value:</strong> 9 points</p>
+                        <p><strong>Movement:</strong> Any number of squares horizontally, vertically, or diagonally</p>
+                        <p><strong>Quantity:</strong> 1 per player</p>
+                    </div>
+                    <div class="piece-card">
+                        <div class="piece-symbol">♖</div>
+                        <h4>Rook (♖)</h4>
+                        <p><strong>Value:</strong> 5 points</p>
+                        <p><strong>Movement:</strong> Any number of squares horizontally or vertically</p>
+                        <p><strong>Quantity:</strong> 2 per player</p>
+                    </div>
+                    <div class="piece-card">
+                        <div class="piece-symbol">♗</div>
+                        <h4>Bishop (♗)</h4>
+                        <p><strong>Value:</strong> 3 points</p>
+                        <p><strong>Movement:</strong> Any number of squares diagonally</p>
+                        <p><strong>Quantity:</strong> 2 per player</p>
+                    </div>
+                    <div class="piece-card">
+                        <div class="piece-symbol">♘</div>
+                        <h4>Knight (♘)</h4>
+                        <p><strong>Value:</strong> 3 points</p>
+                        <p><strong>Movement:</strong> L-shape (2 squares in one direction, 1 square perpendicular)</p>
+                        <p><strong>Quantity:</strong> 2 per player</p>
+                    </div>
+                    <div class="piece-card">
+                        <div class="piece-symbol">♙</div>
+                        <h4>Pawn (♙)</h4>
+                        <p><strong>Value:</strong> 1 point</p>
+                        <p><strong>Movement:</strong> 1 square forward (2 on first move), captures diagonally</p>
+                        <p><strong>Quantity:</strong> 8 per player</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PIECE MOVEMENTS -->
+        <section id="moves" class="section">
+            <h2>How Pieces Move</h2>
+            
+            <div class="subsection">
+                <h3>♔ King Movement</h3>
+                <p>The King can move one square in any direction (horizontally, vertically, or diagonally).</p>
+                <div class="movement-example">
+                    <p>✓ Can move to any adjacent square</p>
+                    <p>✗ Cannot move into check (under attack)</p>
+                    <p>Special Move: <strong>Castling</strong> - Under specific conditions, the king can move two squares toward a rook, and the rook moves over the king</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>♕ Queen Movement</h3>
+                <p>The Queen is the most powerful piece. It can move any number of squares horizontally, vertically, or diagonally in any direction.</p>
+                <div class="movement-example">
+                    <p>✓ Combines rook and bishop powers</p>
+                    <p>✓ Can control up to 27 squares from the center of the board</p>
+                    <p>✗ Cannot jump over other pieces</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>♖ Rook Movement</h3>
+                <p>The Rook can move any number of squares horizontally (left-right) or vertically (up-down).</p>
+                <div class="movement-example">
+                    <p>✓ Moves along ranks (horizontal rows) and files (vertical columns)</p>
+                    <p>✓ Controls 14 squares when on the edge, 14 when in the center</p>
+                    <p>✗ Cannot move diagonally</p>
+                    <p>✗ Cannot jump over pieces</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>♗ Bishop Movement</h3>
+                <p>The Bishop can move any number of squares diagonally in any direction.</p>
+                <div class="movement-example">
+                    <p>✓ Always stays on the same color square (light or dark)</p>
+                    <p>✓ Each player has one light-squared and one dark-squared bishop</p>
+                    <p>✗ Cannot reach squares of the opposite color</p>
+                    <p>✗ Cannot jump over pieces</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>♘ Knight Movement</h3>
+                <p>The Knight moves in an L-shape: 2 squares in one direction and 1 square perpendicular (or vice versa).</p>
+                <div class="movement-example">
+                    <p>✓ Can jump over other pieces (only piece that can)</p>
+                    <p>✓ Always lands on the opposite color square from where it started</p>
+                    <p>✓ From the center, a knight can reach 8 different squares</p>
+                    <p>✓ From the corner, a knight can reach only 2 squares</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>♙ Pawn Movement</h3>
+                <p>Pawns are unique - they move and capture differently!</p>
+                <div class="movement-example">
+                    <p><strong>Forward Movement:</strong></p>
+                    <p>✓ Moves 1 square forward (toward opponent's side)</p>
+                    <p>✓ On its first move, can move 2 squares forward</p>
+                    <p>✗ Cannot move backward</p>
+                    <p></p>
+                    <p><strong>Capturing:</strong></p>
+                    <p>✓ Captures 1 square diagonally forward only</p>
+                    <p></p>
+                    <p><strong>Special Moves:</strong></p>
+                    <p>✓ <strong>En Passant:</strong> Can capture an opponent's pawn that just moved 2 squares forward</p>
+                    <p>✓ <strong>Promotion:</strong> When reaching the opposite end, pawn becomes Queen, Rook, Bishop, or Knight</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: RULES & CHECKMATE -->
+        <section id="rules" class="section">
+            <h2>Official Chess Rules</h2>
+            
+            <div class="subsection">
+                <h3>Starting Position</h3>
+                <p>Each side arranges their pieces in two rows:</p>
+                <p>• Back row (1st/8th): Rook, Knight, Bishop, Queen, King, Bishop, Knight, Rook</p>
+                <p>• Front row: Eight Pawns</p>
+                <p>White always moves first.</p>
+            </div>
+
+            <div class="subsection">
+                <h3>Check</h3>
+                <p>When a king is under direct attack, it is in "check." The player must immediately move to get out of check by:</p>
+                <p>✓ Moving the king away</p>
+                <p>✓ Blocking the attack with another piece</p>
+                <p>✓ Capturing the attacking piece</p>
+            </div>
+
+            <div class="subsection">
+                <h3>Checkmate</h3>
+                <p>Checkmate ends the game. It occurs when:</p>
+                <p>✓ The king is in check</p>
+                <p>✓ The king cannot move to a safe square</p>
+                <p>✓ No piece can block the attack</p>
+                <p>✓ No piece can capture the attacking piece</p>
+                <p>The player being checkmated loses immediately.</p>
+            </div>
+
+            <div class="subsection">
+                <h3>Stalemate</h3>
+                <p>A stalemate is a draw. It occurs when:</p>
+                <p>✓ The player to move is NOT in check</p>
+                <p>✓ The player has NO legal moves available</p>
+            </div>
+
+            <div class="subsection">
+                <h3>Castling</h3>
+                <p>A special move involving the King and Rook:</p>
+                <p>Requirements:</p>
+                <p>✓ Neither the king nor rook has moved before</p>
+                <p>✓ No pieces between king and rook</p>
+                <p>✓ King is not in check</p>
+                <p>✓ King doesn't pass through or land on a square under attack</p>
+                <p></p>
+                <p>Result: King moves 2 squares toward the rook, rook jumps over to the other side of the king</p>
+            </div>
+
+            <div class="subsection">
+                <h3>Other Important Rules</h3>
+                <p>• <strong>Touch-move rule:</strong> If you touch a piece, you must move it (if legal)</p>
+                <p>• <strong>Illegal moves:</strong> Cannot make a move that leaves your king in check</p>
+                <p>• <strong>Draw conditions:</strong> Stalemate, insufficient material, threefold repetition, fifty-move rule</p>
+                <p>• <strong>Time controls:</strong> In formal games, players have limited time</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: TACTICS -->
+        <section id="tactics" class="section">
+            <h2>Chess Tactics & Strategies</h2>
+            
+            <div class="subsection">
+                <h3>🎯 Basic Tactical Motifs</h3>
+                
+                <div class="tactic-card">
+                    <h4>1. Fork</h4>
+                    <p>Attack two or more enemy pieces at once so the opponent can only save one.</p>
+                    <p><strong>Example:</strong> A knight move that attacks the king and rook simultaneously.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>2. Pin</h4>
+                    <p>Prevent a piece from moving because it would expose a more valuable piece (usually the king) to attack.</p>
+                    <p><strong>Example:</strong> A bishop attacking a knight that's protecting the king.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>3. Skewer</h4>
+                    <p>Similar to a pin but the more valuable piece is in front and must move, exposing the less valuable piece behind it.</p>
+                    <p><strong>Example:</strong> Attacking a queen to force it to move, revealing a rook behind it.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>4. Discovered Attack</h4>
+                    <p>Move one piece to reveal an attack by another piece behind it.</p>
+                    <p><strong>Example:</strong> Moving a pawn to uncover a rook's attack on the enemy queen.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>5. Double Attack</h4>
+                    <p>Attack two targets simultaneously that can't both be defended.</p>
+                    <p><strong>Example:</strong> A rook move that threatens both a bishop and a pawn.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>6. Removal of Defender</h4>
+                    <p>Capture or drive away the piece defending an important target.</p>
+                    <p><strong>Example:</strong> Taking the knight that's protecting the rook.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>7. Deflection</h4>
+                    <p>Force a defender away from protecting another piece.</p>
+                    <p><strong>Example:</strong> Attacking the rook to make it move away from defending the bishop.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>8. Decoy</h4>
+                    <p>Lure a piece to a square where it becomes vulnerable to attack.</p>
+                    <p><strong>Example:</strong> Putting your rook on a square where capturing it leads to checkmate.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>9. Zugzwang</h4>
+                    <p>Put opponent in a position where any legal move worsens their position.</p>
+                    <p><strong>Example:</strong> Forcing a king to move to a worse square.</p>
+                </div>
+
+                <div class="tactic-card">
+                    <h4>10. Sacrifice</h4>
+                    <p>Give up material (pieces) to achieve a greater advantage, such as a checkmate.</p>
+                    <p><strong>Example:</strong> Sacrificing a rook to deliver checkmate.</p>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>🔥 Opening Principles</h3>
+                <p>• <strong>Control the center:</strong> Occupy central squares with pawns and pieces</p>
+                <p>• <strong>Develop pieces:</strong> Move knights and bishops before moving the same piece twice</p>
+                <p>• <strong>Castle early:</strong> Get your king to safety</p>
+                <p>• <strong>Connect rooks:</strong> Place rooks on open files</p>
+                <p>• <strong>Avoid moving the queen early:</strong> Can become a target for development</p>
+                <p>• <strong>Don't bring your king out:</strong> Keep it safe in the opening</p>
+            </div>
+
+            <div class="subsection">
+                <h3>⚔️ Middlegame Strategy</h3>
+                <p>• <strong>Create threats:</strong> Always look for forcing moves (checks, captures, threats)</p>
+                <p>• <strong>Calculate variations:</strong> Think 3-4 moves ahead for tactical positions</p>
+                <p>• <strong>Piece activity:</strong> Active pieces are often better than passive ones</p>
+                <p>• <strong>Weak squares:</strong> Identify and control squares opponent can't defend</p>
+                <p>• <strong>Pawn structure:</strong> Understand how pawn formations affect play</p>
+                <p>• <strong>Initiative:</strong> Keep attacking to maintain pressure</p>
+            </div>
+
+            <div class="subsection">
+                <h3>🏁 Endgame Strategy</h3>
+                <p>• <strong>King activity:</strong> King becomes a strong piece in the endgame</p>
+                <p>• <strong>Pawn promotion:</strong> Race pawns to the last rank</p>
+                <p>• <strong>Opposition:</strong> Use king opposition to control squares</p>
+                <p>• <strong>Zugzwang:</strong> Force opponent into bad positions</p>
+                <p>• <strong>Passed pawns:</strong> Create and push passed pawns</p>
+                <p>• <strong>Key squares:</strong> Control critical squares to stop passed pawns</p>
+            </div>
+
+            <div class="subsection">
+                <h3>📚 Famous Chess Tactics Examples</h3>
+                <p><strong>Scholar's Mate:</strong> Quick checkmate in 4 moves against unprepared opponent</p>
+                <p><strong>Fool's Mate:</strong> Fastest possible checkmate (2 moves)</p>
+                <p><strong>Back Rank Mate:</strong> Checkmate the king on the back rank with rook or queen</p>
+                <p><strong>Smothered Mate:</strong> Knight delivers mate to king blocked by own pieces</p>
+                <p><strong>Two Knights Mate:</strong> Two knights can force mate in specific positions</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: BOARD SETUP -->
+        <section id="board" class="section">
+            <h2>Chess Board Setup & Notation</h2>
+            
+            <div class="subsection">
+                <h3>Initial Board Position</h3>
+                <div class="board-setup">
+                    <p>White (starting position):</p>
+                    <pre>
+8 ♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜
+7 ♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟
+6 . . . . . . . .
+5 . . . . . . . .
+4 . . . . . . . .
+3 . . . . . . . .
+2 ♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙
+1 ♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖
+  a b c d e f g h
+                    </pre>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Algebraic Notation</h3>
+                <p>Chess moves are recorded using algebraic notation:</p>
+                <p>• <strong>Files (columns):</strong> a-h (left to right from White's perspective)</p>
+                <p>• <strong>Ranks (rows):</strong> 1-8 (bottom to top from White's perspective)</p>
+                <p></p>
+                <p><strong>How to write moves:</strong></p>
+                <p>• Piece symbol (K, Q, R, B, N) + destination square</p>
+                <p>• Example: Nf3 = Knight to f3</p>
+                <p>• Pawn moves don't have symbol: e4 = Pawn to e4</p>
+                <p>• Captures use 'x': Nxe4 = Knight captures on e4</p>
+                <p>• Check: + (e.g., Nf3+)</p>
+                <p>• Checkmate: # (e.g., Nf7#)</p>
+                <p>• Castling kingside: O-O</p>
+                <p>• Castling queenside: O-O-O</p>
+            </div>
+
+            <div class="subsection">
+                <h3>Common Move Abbreviations</h3>
+                <p>• <strong>K</strong> = King</p>
+                <p>• <strong>Q</strong> = Queen</p>
+                <p>• <strong>R</strong> = Rook</p>
+                <p>• <strong>B</strong> = Bishop</p>
+                <p>• <strong>N</strong> = Knight (to avoid confusion with King)</p>
+                <p>• <strong>x</strong> = Captures</p>
+                <p>• <strong>+</strong> = Check</p>
+                <p>• <strong>#</strong> = Checkmate</p>
+                <p>• <strong>=</strong> = Pawn promotion (e.g., e8=Q)</p>
+                <p>• <strong>!</strong> = Good move</p>
+                <p>• <strong>!!</strong> = Excellent move</p>
+                <p>• <strong>?</strong> = Mistake</p>
+                <p>• <strong>??</strong> = Blunder</p>
+            </div>
+        </section>
+
+        <!-- SECTION 6: TIPS FOR IMPROVEMENT -->
+        <section id="tips" class="section">
+            <h2>Tips for Improving Your Chess</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>1. Play Regularly</h3>
+                    <p>Play against opponents of varying skill levels. This is the best way to learn and improve.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>2. Study Famous Games</h3>
+                    <p>Analyze games by world champions and strong players to learn strategies and tactics.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>3. Solve Puzzles</h3>
+                    <p>Daily tactics puzzles train your tactical vision and calculation skills.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>4. Learn Openings</h3>
+                    <p>Master 2-3 opening systems as White and Black for each playing style.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>5. Study Endgames</h3>
+                    <p>Learn key endgame patterns: rook endgames, queen endgames, pawn endgames.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>6. Analyze Your Games</h3>
+                    <p>Review your games to find mistakes and understand where you went wrong.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>7. Calculate Variations</h3>
+                    <p>Practice calculating variations 4-5 moves ahead without moving pieces.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>8. Understand Pawn Structure</h3>
+                    <p>Learn how pawn structures influence piece placement and strategic plans.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>9. Play Different Time Controls</h3>
+                    <p>Blitz improves pattern recognition; classical improves calculation.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>10. Be Patient</h3>
+                    <p>Chess improvement takes time and dedication. Enjoy the journey!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chess Master Guide. All rights reserved. | Learn Chess, Master Strategy</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
